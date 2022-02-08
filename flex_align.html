@@ -7,8 +7,13 @@
     <title>flex_alignment</title>
     <style>
         #container {
+            background-color: #555;
+            height: 600px;
             display: flex;
-            justify-content: space-around;
+            flex-wrap: wrap;
+
+            /* aligning items horizontally */
+            justify-content: space-evenly;
             /* 
                 OPTIONS:
                 flex-start --> default
@@ -18,8 +23,26 @@
                 space-around --> places even spaces between the boxes and equal spaces at both ends
                 space-evenly --> evenspace between each box and ends 
             */
+
+            /* align items vertically  must be a height*/
+            align-items: baseline;
+
+            /* 
+                flex-start
+                flex-end
+                center
+                baseline
+                stretch(Default)
+            */
+            /* align items vertical where extra space  */
+            /* align-content: space-around; */
         }
-         .item {
+
+        .item-2 {
+            /* align  single item vertical*/
+            align-self:stretch;
+        }
+        .item {
             background: #f4f4f4;
             border: #ccc solid 1px;
             padding: 1rem;
@@ -40,6 +63,7 @@
     <div class="item item-3">
         <h3>Item 3</h3>
     </div>
+    
     </div>
 
 </body>
