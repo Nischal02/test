@@ -6,10 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>flex_alignment</title>
     <style>
-        
+        #container {
+            display: flex;
+            justify-content: space-around;
+            /* 
+                OPTIONS:
+                flex-start --> default
+                flex-end --> right align
+                center
+                space-between --> all the remaining spaces will be added in between the boxes
+                space-around --> places even spaces between the boxes and equal spaces at both ends
+                space-evenly --> evenspace between each box and ends 
+            */
+        }
+         .item {
+            background: #f4f4f4;
+            border: #ccc solid 1px;
+            padding: 1rem;
+            text-align: center;
+            margin: 0.5rem;
+            flex-basis: 200px;
+        }
     </style>
 </head>
 <body>
-    
+    <div id="container">
+    <div class="item item-1">
+        <h3>Item 1</h3>
+    </div>
+    <div class="item item-2">
+        <h3>Item 2</h3>
+    </div>
+    <div class="item item-3">
+        <h3>Item 3</h3>
+    </div>
+    </div>
+
 </body>
 </html>
